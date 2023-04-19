@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "lib_push_swap.h"
 
 int	ft_putnbr_hexa(char *base, unsigned int nbr)
 {
-	if (nbr >= 0 && nbr < 16)
+	if (nbr < 16)
 		return (ft_putchar(base[nbr % 16]));
 	else
 		return (ft_putnbr_hexa(base, (nbr / 16)) + ft_putchar(base[nbr % 16]));
@@ -34,7 +34,7 @@ int	ft_putnbr(int nbr)
 
 int	ft_putnbr_unsigned(unsigned int nbr)
 {
-	if (nbr >= 0 && nbr <= 9)
+	if (nbr <= 9)
 		return (ft_putchar(nbr + '0'));
 	else
 		return (ft_putnbr(nbr / 10) + ft_putchar(nbr % 10 + '0'));

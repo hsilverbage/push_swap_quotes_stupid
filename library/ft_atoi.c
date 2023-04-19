@@ -6,11 +6,11 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:22:30 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/01/06 19:13:21 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/04/19 19:07:55 by hsilverb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib_push_swap.h"
 
 static int	ft_overflow(int neg)
 {
@@ -19,7 +19,7 @@ static int	ft_overflow(int neg)
 	return (-1);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	size_t		i;
 	long int	result;

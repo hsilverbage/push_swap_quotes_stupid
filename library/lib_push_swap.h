@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef LIB_PUSH_SWAP
+# define LIB_PUSH_SWAP
 
 # include <unistd.h>
 # include <stdarg.h>
@@ -24,5 +24,7 @@ int	ft_putchar(char c);
 int	ft_putnbr_hexa(char *base, unsigned int nbr);
 int	ft_putnbr(int nbr);
 int	ft_putnbr_unsigned(unsigned int nbr);
+
+long	ft_atoi(const char *str);
 
 #endif

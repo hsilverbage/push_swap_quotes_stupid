@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "lib_push_swap.h"
 
 int	ft_putchar(char c)
 {
