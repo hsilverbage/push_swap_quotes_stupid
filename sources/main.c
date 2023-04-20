@@ -11,6 +11,7 @@ void	ft_print_list(t_stack *stack_a)
 		ft_printf("%d", temp->data);
 		temp = temp->next;
 	}
+	ft_printf("\n");
 }
 
 int main(int argc, char **argv)
@@ -31,8 +32,10 @@ int main(int argc, char **argv)
 
 	ft_print_list(stack_a);
 
-	ft_free_stack_a(stack_a);
+	ft_swap_a(stack_a);
 
+	ft_print_list(stack_a);
+	ft_free_stack_a(stack_a);
 	ft_printf("\n");
 
 	return (0);
