@@ -50,4 +50,5 @@ void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 	element_a = ft_new_node(argv, 1);
 	stack_a->head = element_a;
 	ft_fill_stack_a(argc, argv, element_a);
+	stack_a->size = argc -1;
 }
