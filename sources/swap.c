@@ -8,26 +8,19 @@ ss : sa and sb at the same time.
 
 #include "../includes/push_swap.h"
 
-void	ft_swap_a(t_stack *stack_a)
+int	ft_swap_a(t_stack *stack_a)
 {
-	t_element	*first;
 	t_element	*second;
+	t_element	*temp;
 
-	first = stack_a->head;
-	printf("address of first : %p\n", &first);
-	second = first->next;
-	printf("address of 2nd : %p\n", &second);
-	first = second;
-	second = stack_a->head;
-
+	second = stack_a->head->next;
+	temp = stack_a->head;
 	stack_a->head = second;
-	printf("address of first : %p\n", &first);
-	printf("data of first : %d\n", first->data);
-	printf("address of 2nd : %p\n", &second);
-	printf("data of 2nd : %d\n", second->data);
+	temp->next = second->next;
+	second->next = temp;
 
 	ft_printf("sa");
-	ft_printf("\n");
+	return (0);
 }
 
 void	ft_swap_b(t_stack stack_a)

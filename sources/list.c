@@ -29,7 +29,7 @@ t_element	*ft_new_node(char **argv, int i)
 	return (new);
 }
 
-void	ft_fill_stack_a(int argc, char **argv, t_element *element_a)
+void	ft_fill_stack_a(int argc, char **argv, t_element *element_a, t_stack *stack_a)
 {
 	int	i;
 
@@ -38,8 +38,11 @@ void	ft_fill_stack_a(int argc, char **argv, t_element *element_a)
 	{
 		element_a->next = ft_new_node(argv, i);
 		element_a = element_a->next;
+		if (i == argc - 2)
+			element_a->next = stack_a->tail;
 		i++;
 	}
+	//printf("%d\n", stack_a->head->tail);
 	element_a = NULL;
 }
 
@@ -49,6 +52,6 @@ void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 
 	element_a = ft_new_node(argv, 1);
 	stack_a->head = element_a;
-	ft_fill_stack_a(argc, argv, element_a);
+	ft_fill_stack_a(argc, argv, element_a, stack_a);
 	stack_a->size = argc -1;
 }

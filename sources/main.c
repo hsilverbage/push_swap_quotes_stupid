@@ -30,9 +30,11 @@ int main(int argc, char **argv)
 
 	ft_create_list(argc, argv, stack_a);
 
-	ft_print_list(stack_a);
+	//`ft_print_list(stack_a);
 
 	ft_swap_a(stack_a);
+
+	//ft_rotate_a(stack_a);
 
 	ft_print_list(stack_a);
 	ft_free_stack_a(stack_a);
