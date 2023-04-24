@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_input.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/24 19:17:48 by hsilverb          #+#    #+#             */
+/*   Updated: 2023/04/24 19:17:48 by hsilverb         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 int	ft_check_duplicates(int argc, char ** argv)
@@ -33,7 +45,7 @@ int	ft_check_only_num(char **argv, int i)
 		j++;
 	if (argv[i][j] < '0' || argv[i][j] > '9')
 		return (-1);
-	while (argv[i][j] > '0' && argv[i][j] < '9')
+	while (argv[i][j] >= '0' && argv[i][j] <= '9')
 		j++;
 	while (argv[i][j] == ' ' || (argv[i][j] > 10 && argv[i][j] < 16))
 		j++;

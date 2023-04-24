@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/24 19:17:42 by hsilverb          #+#    #+#             */
+/*   Updated: 2023/04/24 19:17:42 by hsilverb         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 sa (swap a): Swap the first 2 elements at the top of stack a.
     Do nothing if there is only one or no elements.
@@ -13,13 +25,15 @@ int	ft_swap_a(t_stack *stack_a)
 	t_element	*second;
 	t_element	*temp;
 
+	if (!stack_a->head->next || !stack_a->head)
+		return (0);
 	second = stack_a->head->next;
 	temp = stack_a->head;
 	stack_a->head = second;
 	temp->next = second->next;
 	second->next = temp;
 
-	ft_printf("sa");
+	ft_printf("sa\n");
 	return (0);
 }
 

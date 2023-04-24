@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-void	ft_free_stack_a(t_stack *stack)
+void	ft_free_stack(t_stack *stack)
 {
 	t_element	*prev;
 
@@ -38,11 +38,11 @@ void	ft_fill_stack_a(int argc, char **argv, t_element *element_a, t_stack *stack
 	{
 		element_a->next = ft_new_node(argv, i);
 		element_a = element_a->next;
-		if (i == argc - 2)
-			element_a->next = stack_a->tail;
+		if (i == argc - 1)
+			stack_a->tail = element_a;
 		i++;
 	}
-	//printf("%d\n", stack_a->head->tail);
+	stack_a->size = argc - 1;
 	element_a = NULL;
 }
 
