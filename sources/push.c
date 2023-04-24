@@ -9,10 +9,14 @@ pb (push b): Take the first element at the top of a and put it at the top of b.
 
 int	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 {
+	t_element	*temp;
+
 	if(stack_b->head == NULL)
 		return(0);
-
-
+	temp = stack_b->head;
+	stack_b->head = stack_b->head->next;
+	temp->next = stack_a->head;
+	stack_a->head = temp;
 
 	ft_printf("pa\n");
 	return (0);
@@ -21,12 +25,10 @@ int	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 int	ft_push_b(t_stack *stack_a, t_stack *stack_b)
 {
 	t_element	*temp;
-	t_element	*temp_b;
 
 	if(stack_a->head == NULL)
 		return(0);
 	temp = stack_a->head;
-	temp_b = stack_b->head;
 	stack_a->head = stack_a->head->next;
 	if(!stack_b->head)
 	{
@@ -37,7 +39,7 @@ int	ft_push_b(t_stack *stack_a, t_stack *stack_b)
 	}
 	else
 	{
-		temp->next = temp_b;
+		temp->next = stack_b->head;
 		stack_b->head = temp;
 		stack_b->size += 1;
 	}

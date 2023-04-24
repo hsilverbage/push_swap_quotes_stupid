@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/24 19:25:11 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/04/24 19:34:08 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,6 @@ int main(int argc, char **argv)
 		return (0);
 
 	ft_create_list(argc, argv, stack_a);
-
-	ft_print_list(stack_a);
-	ft_push_b(stack_a, stack_b);
-	ft_print_list(stack_a);
-	ft_print_list(stack_b);
 
 	ft_printf("\n");
 
