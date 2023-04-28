@@ -6,11 +6,31 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:48 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/24 19:17:48 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/04/28 17:31:31 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+int	ft_check_if_sorted(t_stack *stack_a)
+{
+	t_element	*temp;
+	t_element	*checker;
+
+	temp = stack_a->head;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+		checker = stack_a->head;
+		while (checker != temp)
+		{
+			if (temp->data < checker->data)
+				return (-1);
+			checker = checker->next;
+		}
+	}
+	return (0);
+}
 
 int	ft_check_duplicates(int argc, char ** argv)
 {

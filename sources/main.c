@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/24 19:34:08 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/04/28 19:27:04 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ void	ft_print_list(t_stack *stack)
 	if(stack->head == NULL)
 		return;
 	temp = stack->head;
-	// printf("head of the list is : %d \n", stack->head->data);
-	// printf("the tail of stack_a is %d\n", stack_a->tail->data);
-	// printf("the size of stack is %d\n", stack->size);
 	while (temp != NULL)
 	{
 		ft_printf("%d", temp->data);
@@ -35,7 +32,7 @@ int main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
-	if (argc < 2)
+	if (argc < 3)
 		return (0);
 	if (ft_check_input(argc, argv) == -1)
 		return (ft_printf("Error\n"));
@@ -43,10 +40,13 @@ int main(int argc, char **argv)
 	stack_b = malloc(sizeof(t_stack));
 	if (!stack_a || !stack_b)
 		return (0);
-
 	ft_create_list(argc, argv, stack_a);
-
-	ft_printf("\n");
-
+	if (argc < 7 && (ft_check_if_sorted(stack_a) == -1))
+		ft_small_sort(argc, stack_a);
+	//else
+	//	ft_radix(stack_a);
+	ft_print_list(stack_a);
+	ft_free_stack(stack_a);
+	ft_free_stack(stack_b);
 	return (0);
 }

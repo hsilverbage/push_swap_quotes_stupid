@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
+/*   Updated: 2023/04/28 19:07:45 by hsilverb         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	ft_free_stack(t_stack *stack)
@@ -29,29 +41,36 @@ t_element	*ft_new_node(char **argv, int i)
 	return (new);
 }
 
-void	ft_fill_stack_a(int argc, char **argv, t_element *element_a, t_stack *stack_a)
+void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 {
+	t_element	*new;
 	int	i;
 
 	i = 2;
 	while (i < argc)
 	{
-		element_a->next = ft_new_node(argv, i);
-		element_a = element_a->next;
-		if (i == argc - 1)
-			stack_a->tail = element_a;
+		new->next = ft_new_node(argv, i);
+		new = new->next;
+		if (new->data > stack_a->max)
+			stack_a->max = new->data;
+		if (new->data < stack_a->min)
+			stack_a->min = new->data;
+		if (new->next == NULL)
+			stack_a->last = new;
 		i++;
 	}
-	stack_a->size = argc - 1;
-	element_a = NULL;
+	new = NULL;
 }
 
 void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 {
-	t_element	*element_a;
+	t_element	*new;
 
-	element_a = ft_new_node(argv, 1);
-	stack_a->head = element_a;
-	ft_fill_stack_a(argc, argv, element_a, stack_a);
-	stack_a->size = argc -1;
+	new = ft_new_node(argv, 1);
+	stack_a->head = new;
+	stack_a->max = new->data;
+	stack_a->min = new->data;
+	ft_fill_stack_a(argc, argv, stack_a);
+	stack_a->size = argc - 1;
+
 }

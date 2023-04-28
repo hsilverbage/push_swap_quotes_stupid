@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:30 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/24 19:17:30 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/04/28 15:49:49 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,34 +20,29 @@ rr : ra and rb at the same time.
 
 #include "../includes/push_swap.h"
 
-int	ft_rotate_a(t_stack *stack_a)
+void	ft_rotate(t_stack *stack, char c)
 {
 	t_element	*temp;
 	t_element	*first;
 
-	if (!stack_a->head || !stack_a->head->next)
-		return (0);
-	first = stack_a->head;
-	stack_a->head = stack_a->head->next;
-	temp = stack_a->head;
+	if (!stack->head || !stack->head->next)
+		return ;
+	first = stack->head;
+	stack->head = first->next;
+	temp = stack->head;
 	while (temp->next != NULL)
 		temp = temp->next;
 	temp->next = first;
-	stack_a->tail = first;
-	temp->next->next = NULL;
-	ft_printf("ra\n");
-	return (0);
+	first->next = NULL;
+	if (c == 'a')
+		ft_printf("ra\n");
+	else if (c == 'b')
+		ft_printf("rb\n");
 }
-// int	ft_rotate_b(t_stack stack_a)
-// {
 
-
-
-// }
-
-// int	ft_rotate_a_and_b(stack_a)
-// {
-
-
-
-// }
+void	ft_rotate_a_and_b(t_stack *stack_a, t_stack *stack_b)
+{
+	ft_rotate(stack_a, 'x');
+	ft_rotate(stack_b, 'x');
+	ft_printf("rr\n");
+}
