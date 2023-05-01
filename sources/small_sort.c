@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:01 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/01 18:53:29 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 00:05:02 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	ft_sort_5(t_stack *stack_a, t_stack *stack_b)
 			ft_reverse(stack_a, 'a');
 	}
 	ft_push_b(stack_a, stack_b);
-	ft_print_list(stack_a);
 	ft_sort_4(stack_a, stack_b);
 	ft_push_a(stack_a, stack_b);
 	if (ft_check_if_sorted(stack_a) == -1)

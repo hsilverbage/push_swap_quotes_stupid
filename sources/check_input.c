@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:48 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/28 17:31:31 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 00:02:52 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ int	ft_check_duplicates(int argc, char ** argv)
 	i = 1;
 	while (i < argc)
 	{
-		nb = ft_atoi(argv[i]);
+		nb = ft_atol(argv[i]);
 		j = i + 1;
 		while (j < argc)
 		{
-			if (nb == ft_atoi(argv[j]))
+			if (nb == ft_atol(argv[j]))
 				return (-1);
 			j++;
 		}
@@ -84,7 +84,7 @@ int	ft_check_input(int argc, char **argv)
 	{
 		if (ft_check_only_num(argv, i) == -1)
 			return (-1);
-		nb = ft_atoi(argv[i]);
+		nb = ft_atol(argv[i]);
 		if (nb < -2147483648 || nb > 2147483647)
 			return (-1);
 		if (ft_check_duplicates(argc, argv) == -1)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/01 17:07:07 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 00:01:05 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_element	*ft_new_node(char **argv, int i)
 	new = malloc(sizeof(t_element));
 	if (!new)
 		return (NULL);
-	new->data = ft_atoi(argv[i]);
+	new->data = ft_atol(argv[i]);
 	new->next = NULL;
 	new->index = -1;
 	return (new);
