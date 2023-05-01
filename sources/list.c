@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/28 19:07:45 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/01 17:07:07 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ t_element	*ft_new_node(char **argv, int i)
 		return (NULL);
 	new->data = ft_atoi(argv[i]);
 	new->next = NULL;
+	new->index = -1;
 	return (new);
 }
 
@@ -62,6 +63,30 @@ void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 	new = NULL;
 }
 
+void	ft_set_index(t_stack *stack_a)
+{
+	t_element	*temp;
+	t_element	*checker;
+	int			index;
+
+	temp = stack_a->head;
+	index = 1;
+	while (index <= stack_a->size)
+	{
+		while (temp->index != -1)
+			temp = temp->next;
+		checker = temp->next;
+		while (checker != NULL)
+		{
+			if (checker->data < temp->data && checker->index == -1)
+				temp = checker;
+			checker = checker->next;
+		}
+		temp->index = index++;
+		temp = stack_a->head;
+	}
+}
+
 void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 {
 	t_element	*new;
@@ -72,5 +97,13 @@ void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 	stack_a->min = new->data;
 	ft_fill_stack_a(argc, argv, stack_a);
 	stack_a->size = argc - 1;
+	ft_set_index(stack_a);
+	t_element	*temp = stack_a->head;
+	int i = 1;
+	while (temp)
+	{
+		printf("index of %d is %d\n", temp->data, temp->index);
+		temp = temp->next;
+	}
 
 }
