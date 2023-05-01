@@ -32,9 +32,9 @@ void	ft_swap(t_stack *stack, char c)
 	stack->head = second;
 	temp->next = second->next;
 	second->next = temp;
-	if (c = 'a')
+	if (c == 'a')
 		ft_printf("sa\n");
-	else if (c = 'b')
+	else if (c == 'b')
 		ft_printf("sb");
 }
 

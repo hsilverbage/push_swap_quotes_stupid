@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 		return (0);
 	ft_create_list(argc, argv, stack_a);
 	if (argc < 7 && (ft_check_if_sorted(stack_a) == -1))
-		ft_small_sort(argc, stack_a);
+		ft_small_sort(argc, stack_a, stack_b);
 	//else
 	//	ft_radix(stack_a);
 	ft_print_list(stack_a);

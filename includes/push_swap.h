@@ -21,7 +21,7 @@
 typedef	struct	s_element
 {
 	int					data;
-	// int				index;
+	int					index;
 	struct s_element	*next;
 }				t_element;
 
@@ -55,7 +55,7 @@ void	ft_reverse_a_and_b(t_stack *stack_a, t_stack *stack_b);
 void	ft_push_a(t_stack *stack_a, t_stack *stack_b);
 void	ft_push_b(t_stack *stack_a, t_stack *stack_b);
 
-void	ft_small_sort(int argc, t_stack *stack_a);
+void	ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
 
 
 #endif
