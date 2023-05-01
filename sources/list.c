@@ -98,12 +98,4 @@ void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 	ft_fill_stack_a(argc, argv, stack_a);
 	stack_a->size = argc - 1;
 	ft_set_index(stack_a);
-	t_element	*temp = stack_a->head;
-	int i = 1;
-	while (temp)
-	{
-		printf("index of %d is %d\n", temp->data, temp->index);
-		temp = temp->next;
-	}
-
 }

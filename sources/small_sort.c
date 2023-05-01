@@ -17,6 +17,7 @@ int	ft_find_distance(t_stack *stack_a, int nb)
 	t_element	*temp;
 	int			i;
 
+
 	i = 1;
 	temp = stack_a->head;
 	while (temp->index != nb)
@@ -72,6 +73,7 @@ void	ft_sort_5(t_stack *stack_a, t_stack *stack_b)
 			ft_reverse(stack_a, 'a');
 	}
 	ft_push_b(stack_a, stack_b);
+	ft_print_list(stack_a);
 	ft_sort_4(stack_a, stack_b);
 	ft_push_a(stack_a, stack_b);
 	if (ft_check_if_sorted(stack_a) == -1)

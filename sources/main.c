@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/28 19:27:04 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/01 23:07:29 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+void	ft_print_index(t_stack *stack)
+{
+	t_element	*temp = stack->head;
+
+	while (temp)
+	{
+		printf("index of %d is %d\n", temp->data, temp->index);
+		temp = temp->next;
+	}
+}
 void	ft_print_list(t_stack *stack)
 {
 	t_element	*temp;
@@ -43,8 +53,8 @@ int main(int argc, char **argv)
 	ft_create_list(argc, argv, stack_a);
 	if (argc < 7 && (ft_check_if_sorted(stack_a) == -1))
 		ft_small_sort(argc, stack_a, stack_b);
-	//else
-	//	ft_radix(stack_a);
+	else
+		ft_radix(stack_a, stack_b);
 	ft_print_list(stack_a);
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
