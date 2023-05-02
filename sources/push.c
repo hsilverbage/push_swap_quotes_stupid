@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:26 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:11:34 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:37:19 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 {
 	t_element	*temp;
 
-	if(stack_b->head == NULL)
+	if (stack_b->head == NULL)
 		return ;
 	temp = stack_b->head;
 	stack_b->head = stack_b->head->next;
 	temp->next = stack_a->head;
 	stack_a->head = temp;
-
 	ft_printf("pa\n");
 }
 
@@ -37,7 +36,7 @@ void	ft_push_b(t_stack *stack_a, t_stack *stack_b)
 {
 	t_element	*temp;
 
-	if(stack_a->head == NULL)
+	if (stack_a->head == NULL)
 		return ;
 	temp = stack_a->head;
 	stack_a->head = stack_a->head->next;

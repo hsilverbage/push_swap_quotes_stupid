@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:27:56 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:38:01 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ t_element	*ft_new_node(char **argv, int i)
 void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 {
 	t_element	*new;
-	int	i;
+	int			i;
 
 	new = stack_a->head;
 	i = 2;

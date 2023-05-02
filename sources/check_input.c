@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:48 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 00:02:52 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:36:15 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_check_if_sorted(t_stack *stack_a)
 	return (0);
 }
 
-int	ft_check_duplicates(int argc, char ** argv)
+int	ft_check_duplicates(int argc, char **argv)
 {
 	int	i;
 	int	j;

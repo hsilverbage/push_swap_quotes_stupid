@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 22:07:14 by henrik            #+#    #+#             */
-/*   Updated: 2023/05/02 18:02:58 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:36:43 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	ft_get_max_bits(t_stack *stack_a)
 	}
 	return (max_bits);
 }
-
 
 void	ft_radix(t_stack *stack_a, t_stack *stack_b)
 {

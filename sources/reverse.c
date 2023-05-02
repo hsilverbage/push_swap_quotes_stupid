@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:53 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:02:53 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:38:12 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ void	ft_reverse_a_and_b(t_stack *stack_a, t_stack *stack_b)
 {
 	ft_reverse(stack_a, 'x');
 	ft_reverse(stack_b, 'x');
-
 	ft_printf("rrr\n");
 }

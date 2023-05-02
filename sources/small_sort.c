@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:01 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:02:41 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:37:46 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	ft_find_distance(t_stack *stack_a, int nb)
 {
 	t_element	*temp;
 	int			i;
-
 
 	i = 1;
 	temp = stack_a->head;
@@ -30,7 +29,7 @@ int	ft_find_distance(t_stack *stack_a, int nb)
 
 void	ft_sort_3(t_stack *stack_a)
 {
-	int max;
+	int	max;
 
 	max = ft_find_distance(stack_a, stack_a->size);
 	if (max == 1)
@@ -46,7 +45,7 @@ void	ft_sort_4(t_stack *stack_a, t_stack *stack_b)
 	int	min;
 
 	min = ft_find_distance(stack_a, 1);
-	if (min ==2)
+	if (min == 2)
 		ft_swap(stack_a, 'a');
 	else if (min == 3)
 	{

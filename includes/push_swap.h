@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:27:06 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:39:34 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,37 +35,35 @@ typedef struct s_stack
 
 t_element	*ft_new_node(char **argv, int i);
 
-int	ft_check_input(int argc, char **argv);
-int	ft_check_if_sorted(t_stack *stack_a);
+int			ft_check_input(int argc, char **argv);
+int			ft_check_if_sorted(t_stack *stack_a);
 
-void	ft_create_list(int argc, char **argv, t_stack *stack_a);
-void	ft_free_stack(t_stack *stack);
-void	ft_rotate(t_stack *stack, char c);
-void	ft_rotate_a_and_b(t_stack *stack_a, t_stack *stack_b);
-void	ft_swap(t_stack *stack, char c);
-void	ft_swap_a_and_b(t_stack *stack_a, t_stack *stack_b);
-void	ft_reverse(t_stack *stack, char c);
-void	ft_reverse_a_and_b(t_stack *stack_a, t_stack *stack_b);
-void	ft_push_a(t_stack *stack_a, t_stack *stack_b);
-void	ft_push_b(t_stack *stack_a, t_stack *stack_b);
-void	ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
-void	ft_radix(t_stack *stack_a, t_stack *stack_b);
+void		ft_create_list(int argc, char **argv, t_stack *stack_a);
+void		ft_free_stack(t_stack *stack);
+void		ft_rotate(t_stack *stack, char c);
+void		ft_rotate_a_and_b(t_stack *stack_a, t_stack *stack_b);
+void		ft_swap(t_stack *stack, char c);
+void		ft_swap_a_and_b(t_stack *stack_a, t_stack *stack_b);
+void		ft_reverse(t_stack *stack, char c);
+void		ft_reverse_a_and_b(t_stack *stack_a, t_stack *stack_b);
+void		ft_push_a(t_stack *stack_a, t_stack *stack_b);
+void		ft_push_b(t_stack *stack_a, t_stack *stack_b);
+void		ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
+void		ft_radix(t_stack *stack_a, t_stack *stack_b);
 
 /*----------------------------UTILS--------------------------------*/
 
+void		ft_bzero(void *s, size_t n);
 
-void	ft_bzero(void *s, size_t n);
+int			ft_printf(const char *str, ...);
+int			ft_format(va_list args, char c);
+int			ft_print_address(void *address);
+int			ft_putstr(char *str);
+int			ft_putchar(char c);
+int			ft_putnbr_hexa(char *base, unsigned int nbr);
+int			ft_putnbr(int nbr);
+int			ft_putnbr_unsigned(unsigned int nbr);
 
-int	ft_printf(const char *str, ...);
-int	ft_format(va_list args, char c);
-int	ft_print_address(void *address);
-int	ft_putstr(char *str);
-int	ft_putchar(char c);
-int	ft_putnbr_hexa(char *base, unsigned int nbr);
-int	ft_putnbr(int nbr);
-int	ft_putnbr_unsigned(unsigned int nbr);
-
-long	ft_atol(const char *str);
-
+long		ft_atol(const char *str);
 
 #endif
