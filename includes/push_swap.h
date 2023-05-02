@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 13:58:04 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 16:28:48 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef	struct	s_element
 typedef	struct	s_stack
 {
 	t_element	*head;
-	t_element	*last;
 	int			max;
 	int			min;
 	int			size;

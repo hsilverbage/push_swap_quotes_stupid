@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 00:01:05 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 17:40:34 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	ft_free_stack(t_stack *stack)
 			stack->head = stack->head->next;
 			free(prev);
 		}
-		free(stack->head);
 	}
-	free(stack);
 }
 
 t_element	*ft_new_node(char **argv, int i)
@@ -37,7 +35,6 @@ t_element	*ft_new_node(char **argv, int i)
 	if (!new)
 		return (NULL);
 	new->data = ft_atol(argv[i]);
-	new->next = NULL;
 	new->index = -1;
 	return (new);
 }
@@ -47,6 +44,7 @@ void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 	t_element	*new;
 	int	i;
 
+	new = stack_a->head;
 	i = 2;
 	while (i < argc)
 	{
@@ -56,8 +54,6 @@ void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 			stack_a->max = new->data;
 		if (new->data < stack_a->min)
 			stack_a->min = new->data;
-		if (new->next == NULL)
-			stack_a->last = new;
 		i++;
 	}
 	new = NULL;
@@ -70,6 +66,7 @@ void	ft_set_index(t_stack *stack_a)
 	int			index;
 
 	temp = stack_a->head;
+	checker = NULL;
 	index = 1;
 	while (index <= stack_a->size)
 	{
@@ -95,7 +92,7 @@ void	ft_create_list(int argc, char **argv, t_stack *stack_a)
 	stack_a->head = new;
 	stack_a->max = new->data;
 	stack_a->min = new->data;
-	ft_fill_stack_a(argc, argv, stack_a);
 	stack_a->size = argc - 1;
+	ft_fill_stack_a(argc, argv, stack_a);
 	ft_set_index(stack_a);
 }

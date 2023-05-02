@@ -2,8 +2,8 @@
 
 NAME = push_swap
 
-CC = gcc -g3
-
+CC = cc -g3
+CFLAGS = -Wall -Werror -Wextra -fsanitize=address
 SRC_DIR = .
 OBJ_DIR = .obj
 
