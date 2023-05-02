@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 00:19:10 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 13:58:04 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_push_b(t_stack *stack_a, t_stack *stack_b);
 void	ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
 void	ft_radix(t_stack *stack_a, t_stack *stack_b);
 
----------------------------------->UTILS<-------------------------------------
+/*----------------------------UTILS--------------------------------*/
 
 # include <unistd.h>
 # include <stdarg.h>

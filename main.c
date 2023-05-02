@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/01 23:07:29 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 14:23:49 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "includes/push_swap.h"
 
 void	ft_print_index(t_stack *stack)
 {
