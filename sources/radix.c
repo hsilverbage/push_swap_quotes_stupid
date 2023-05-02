@@ -6,11 +6,11 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 22:07:14 by henrik            #+#    #+#             */
-/*   Updated: 2023/05/02 12:16:06 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:58 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	ft_get_max_bits(t_stack *stack_a)
 {

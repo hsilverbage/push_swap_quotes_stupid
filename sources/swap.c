@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:42 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/28 15:55:00 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:38 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ sb (swap b): Swap the first 2 elements at the top of stack b.
 ss : sa and sb at the same time.
 */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	ft_swap(t_stack *stack, char c)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:30 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/04/28 15:49:49 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:47 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ rb (rotate b): Shift up all elements of stack b by 1.
 rr : ra and rb at the same time.
 */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	ft_rotate(t_stack *stack, char c)
 {

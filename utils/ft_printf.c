@@ -6,11 +6,11 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 06:09:50 by henrik            #+#    #+#             */
-/*   Updated: 2023/05/02 00:16:13 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:25 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	ft_putchar(char c)
 {

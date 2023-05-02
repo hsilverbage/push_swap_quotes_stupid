@@ -1,11 +1,13 @@
-.PHONY:         clean fclean re norm
+.PHONY:		clean fclean re norm
 
 NAME = push_swap
 
 CC = cc -g3
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -MMD -MP -fsanitize=address
+INCLUDES = -I ./includes
 SRC_DIR = .
 OBJ_DIR = .obj
+DEPS = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.d)
 
 
 RED=\033[0;31m
@@ -18,6 +20,7 @@ SRC =	$(SRC_DIR)/main.c					\
 		$(SRC_DIR)/utils/ft_atol.c			\
 		$(SRC_DIR)/utils/ft_printf.c		\
 		$(SRC_DIR)/utils/ft_printf_utils.c	\
+		$(SRC_DIR)/utils/ft_bzero.c			\
 		$(SRC_DIR)/sources/list.c			\
 		$(SRC_DIR)/sources/push.c			\
 		$(SRC_DIR)/sources/reverse.c		\
@@ -32,26 +35,25 @@ OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo -e "$(GREEN)Compilation succeded ! ✔️$(END)"
+	@$(CC) $(CFLAGS) $(OBJ) $(INCLUDES) -o $(NAME)
+	@echo "$(GREEN)Compilation succeded ! ✔️$(END)"
+
+-include $(DEPS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR) $(OBJ_DIR)/sources $(OBJ_DIR)/utils
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 norm:
-	@if ! norminette | grep -v "OK" > /dev/null; then \
-		echo -e "$(GREEN)Norminette succeded ! ✔️$(END)"; \
-	else \
-		norminette | grep -v "OK" | grep --color=always "$(RED)KO$(END)"; \
-	fi
+	norminette | grep "Error" && echo "$(RED)norminette KO!$(END)" || echo "$(GREEN)norminette OK!$(END)"
 
 clean:
-	@echo -e "$(YELLOW)Deleting all files 🗑$(END)"
+	@echo "$(YELLOW)Deleting all files 🗑$(END)"
 		@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo -e "$(BLUE)Deleting the final program 🗑$(END)"
+	@echo "$(BLUE)Deleting the final program 🗑$(END)"
 		@rm -f $(NAME)
 
-re: fclean all norm
+re: fclean norm
+	$(MAKE) all

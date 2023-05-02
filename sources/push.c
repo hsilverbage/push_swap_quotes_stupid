@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:26 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/01 17:45:07 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:11:34 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ pb (push b): Take the first element at the top of a and put it at the top of b.
 	Do nothing if a is empty.
 */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 {
@@ -41,7 +41,7 @@ void	ft_push_b(t_stack *stack_a, t_stack *stack_b)
 		return ;
 	temp = stack_a->head;
 	stack_a->head = stack_a->head->next;
-	if(!stack_b->head)
+	if (stack_b->head != NULL)
 	{
 		stack_b->head = temp;
 		stack_b->head->next = NULL;

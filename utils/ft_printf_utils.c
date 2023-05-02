@@ -6,11 +6,11 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:42:03 by henrik            #+#    #+#             */
-/*   Updated: 2023/05/02 00:16:22 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:30 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	ft_putnbr_hexa(char *base, unsigned int nbr)
 {

@@ -6,11 +6,11 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:22:30 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 00:16:26 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:34 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 static int	ft_overflow(int neg)
 {

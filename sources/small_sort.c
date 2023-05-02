@@ -6,11 +6,11 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:01 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 00:17:59 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:02:41 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	ft_find_distance(t_stack *stack_a, int nb)
 {

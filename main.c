@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 17:38:51 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:35:35 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "push_swap.h"
 
 void	ft_print_index(t_stack *stack)
 {
@@ -26,8 +26,8 @@ void	ft_print_list(t_stack *stack)
 {
 	t_element	*temp;
 
-	if(stack->head == NULL)
-		return;
+	if (stack->head == NULL)
+		return ;
 	temp = stack->head;
 	while (temp != NULL)
 	{
@@ -42,6 +42,8 @@ int main(int argc, char **argv)
 	t_stack	stack_b;
 	t_stack	stack_a;
 
+	ft_bzero(&stack_a, sizeof(t_stack));
+	ft_bzero(&stack_b, sizeof(t_stack));
 	if (argc < 3)
 		return (0);
 	if (ft_check_input(argc, argv) == -1)
@@ -52,9 +54,6 @@ int main(int argc, char **argv)
 	else
 		ft_radix(&stack_a, &stack_b);
 	ft_print_list(&stack_a);
-	// printf("b->head == %p\nb->last == %p\nb->max == %i\nb->min == %i\nb->size == %i\n", stack_b.head, stack_b.last, stack_b.max, stack_b.min, stack_b.size);
-	// ft_print_list(&stack_b);
 	ft_free_stack(&stack_a);
-	// ft_free_stack(&stack_b);
 	return (0);
 }

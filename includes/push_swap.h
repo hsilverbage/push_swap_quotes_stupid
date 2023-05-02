@@ -3,27 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 16:28:48 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:27:06 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdlib.h>
-#include <stdio.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdarg.h>
 
-typedef	struct	s_element
+typedef struct s_element
 {
 	int					data;
 	int					index;
 	struct s_element	*next;
 }				t_element;
 
-typedef	struct	s_stack
+typedef struct s_stack
 {
 	t_element	*head;
 	int			max;
@@ -51,8 +53,8 @@ void	ft_radix(t_stack *stack_a, t_stack *stack_b);
 
 /*----------------------------UTILS--------------------------------*/
 
-# include <unistd.h>
-# include <stdarg.h>
+
+void	ft_bzero(void *s, size_t n);
 
 int	ft_printf(const char *str, ...);
 int	ft_format(va_list args, char c);

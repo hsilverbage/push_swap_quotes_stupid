@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 17:40:34 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 18:27:56 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ t_element	*ft_new_node(char **argv, int i)
 		return (NULL);
 	new->data = ft_atol(argv[i]);
 	new->index = -1;
+	new->next = NULL;
 	return (new);
 }
 
@@ -55,8 +56,8 @@ void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 		if (new->data < stack_a->min)
 			stack_a->min = new->data;
 		i++;
+		new->next = NULL;
 	}
-	new = NULL;
 }
 
 void	ft_set_index(t_stack *stack_a)
@@ -66,7 +67,6 @@ void	ft_set_index(t_stack *stack_a)
 	int			index;
 
 	temp = stack_a->head;
-	checker = NULL;
 	index = 1;
 	while (index <= stack_a->size)
 	{
