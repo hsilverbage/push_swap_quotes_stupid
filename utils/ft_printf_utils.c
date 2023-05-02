@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:42:03 by henrik            #+#    #+#             */
-/*   Updated: 2022/12/27 10:14:24 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 00:16:22 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_putnbr_hexa(char *base, unsigned int nbr)
 {

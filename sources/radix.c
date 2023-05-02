@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 22:07:14 by henrik            #+#    #+#             */
-/*   Updated: 2023/05/01 22:07:15 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 12:16:06 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,3 @@ void	ft_radix(t_stack *stack_a, t_stack *stack_b)
 		i++;
 	}
 }
-
-
