@@ -45,15 +45,15 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 norm:
-	norminette | grep "Error" && echo "$(RED)norminette KO!$(END)" || echo "$(GREEN)norminette OK!$(END)"
+	@norminette | grep "Error" && echo "$(RED)Norminette KO!$(END)" || echo "$(GREEN)Norminette OK!$(END)"
 
 clean:
 	@echo "$(YELLOW)Deleting all files 🗑$(END)"
 		@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo "$(BLUE)Deleting the final program 🗑$(END)"
+	@echo "$(YELLOW)Deleting the final program 🗑$(END)"
 		@rm -f $(NAME)
 
 re: fclean norm
-	$(MAKE) all
+	@$(MAKE) all

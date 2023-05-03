@@ -6,19 +6,11 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:22:30 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 19:35:27 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 19:54:05 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <limits.h>
-
-static long	ft_overflow(int neg)
-{
-	if (neg < 0)
-		return (LONG_MIN);
-	return (LONG_MAX);
-}
 
 long	ft_atol(const char *str)
 {
@@ -40,8 +32,8 @@ long	ft_atol(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result != ((result * 10 + (str[i] - '0')) / 10))
-			return (ft_overflow(neg));
+		if (result < INT_MAX || result > INT_MAX)
+			return (LONG_MAX);
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
