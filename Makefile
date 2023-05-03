@@ -3,7 +3,7 @@
 NAME = push_swap
 
 CC = cc -g3
-CFLAGS = -Wall -Werror -Wextra -MMD -MP -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -MMD -MP #-fsanitize=address
 INCLUDES = -I ./includes
 SRC_DIR = .
 OBJ_DIR = .obj
@@ -52,8 +52,7 @@ clean:
 		@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	@echo "$(YELLOW)Deleting the final program 🗑$(END)"
+	@echo "$(YELLOW)Deleting the final program 🗑 $(END)"
 		@rm -f $(NAME)
 
-re: fclean norm
-	@$(MAKE) all
+re: fclean norm all

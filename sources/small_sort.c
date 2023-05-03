@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	ft_find_distance(t_stack *stack_a, int nb)
+int	ft_find_num(t_stack *stack_a, int nb)
 {
 	t_element	*temp;
 	int			i;
@@ -31,7 +31,7 @@ void	ft_sort_3(t_stack *stack_a)
 {
 	int	max;
 
-	max = ft_find_distance(stack_a, stack_a->size);
+	max = ft_find_num(stack_a, stack_a->size);
 	if (max == 1)
 		ft_rotate(stack_a, 'a');
 	else if (max == 2)
@@ -44,7 +44,7 @@ void	ft_sort_4(t_stack *stack_a, t_stack *stack_b)
 {
 	int	min;
 
-	min = ft_find_distance(stack_a, 1);
+	min = ft_find_num(stack_a, 1);
 	if (min == 2)
 		ft_swap(stack_a, 'a');
 	else if (min == 3)
@@ -61,18 +61,25 @@ void	ft_sort_4(t_stack *stack_a, t_stack *stack_b)
 
 void	ft_sort_5(t_stack *stack_a, t_stack *stack_b)
 {
-	int	nb;
+	int	size_b;
 
-	nb = ft_find_distance(stack_a, 2);
-	if (nb == 2)
-		ft_swap(stack_a, 'a');
-	else if (nb != 1)
+	size_b = 0;
+	while (size_b != 2)
 	{
-		while (ft_find_distance(stack_a, 2) != 1)
-			ft_reverse(stack_a, 'a');
+		if (ft_find_num(stack_a, 1) == 1 || ft_find_num(stack_a, 2) == 1)
+		{
+			ft_push_b(stack_a, stack_b);
+			size_b++;
+		}
+		else if (ft_find_num(stack_a, 1) == 2 || ft_find_num(stack_a, 1) == 2)
+		else if (nb != 1)
+		{
+			while (ft_find_num(stack_a, 2) != 1)
+				ft_reverse(stack_a, 'a');
+		}
 	}
 	ft_push_b(stack_a, stack_b);
-	ft_sort_4(stack_a, stack_b);
+	ft_sort_3(stack_a);
 	ft_push_a(stack_a, stack_b);
 	if (ft_check_if_sorted(stack_a) == -1)
 		ft_swap(stack_a, 'a');

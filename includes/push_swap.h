@@ -52,6 +52,7 @@ void		ft_push_b(t_stack *stack_a, t_stack *stack_b);
 void		ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
 void		ft_radix(t_stack *stack_a, t_stack *stack_b);
 
+void		ft_print_list(t_stack *stack);
 /*----------------------------UTILS--------------------------------*/
 
 void		ft_bzero(void *s, size_t n);

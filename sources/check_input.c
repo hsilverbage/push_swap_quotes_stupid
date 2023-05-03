@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:48 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 19:50:55 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/03 15:18:25 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,13 +85,11 @@ int	ft_check_input(int argc, char **argv)
 		if (ft_check_only_num(argv, i) == -1)
 			return (-1);
 		nb = ft_atol(argv[i]);
-		printf("value of n is %ld\n", nb);
 		if (nb < INT_MIN || nb > INT_MAX)
 			return (-1);
 		if (ft_check_duplicates(argc, argv) == -1)
 			return (-1);
 		i++;
 	}
-	printf("value of n is %ld\n", nb);
 	return (0);
 }

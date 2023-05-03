@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 19:40:44 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/03 15:15:46 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,20 @@
 // 		temp = temp->next;
 // 	}
 // }
-// void	ft_print_list(t_stack *stack)
-// {
-// 	t_element	*temp;
+void	ft_print_list(t_stack *stack)
+{
+	t_element	*temp;
 
-// 	if (stack->head == NULL)
-// 		return ;
-// 	temp = stack->head;
-// 	while (temp != NULL)
-// 	{
-// 		ft_printf("%d", temp->data);
-// 		temp = temp->next;
-// 	}
-// 	ft_printf("\n");
-// }
+	if (stack->head == NULL)
+		return ;
+	temp = stack->head;
+	while (temp != NULL)
+	{
+		ft_printf("%d", temp->data);
+		temp = temp->next;
+	}
+	ft_printf("\n");
+}
 
 int	main(int argc, char **argv)
 {
@@ -44,10 +44,12 @@ int	main(int argc, char **argv)
 
 	ft_bzero(&stack_a, sizeof(t_stack));
 	ft_bzero(&stack_b, sizeof(t_stack));
-	if (argc < 3)
+	if (argc < 2)
 		return (0);
 	if (ft_check_input(argc, argv) == -1)
 		return (ft_printf("Error\n"));
+	if (argc < 3)
+		return (0);
 	ft_create_list(argc, argv, &stack_a);
 	if (argc < 7 && (ft_check_if_sorted(&stack_a) == -1))
 		ft_small_sort(argc, &stack_a, &stack_b);
