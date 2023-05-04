@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:26 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 19:37:19 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/04 17:15:22 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_push_b(t_stack *stack_a, t_stack *stack_b)
 		return ;
 	temp = stack_a->head;
 	stack_a->head = stack_a->head->next;
-	if (stack_b->head != NULL)
+	if (stack_b->head == NULL)
 	{
 		stack_b->head = temp;
 		stack_b->head->next = NULL;

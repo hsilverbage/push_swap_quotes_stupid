@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 19:43:01 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/04 17:33:36 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void		ft_push_b(t_stack *stack_a, t_stack *stack_b);
 void		ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
 void		ft_radix(t_stack *stack_a, t_stack *stack_b);
 
-void		ft_print_list(t_stack *stack);
 /*----------------------------UTILS--------------------------------*/
 
 void		ft_bzero(void *s, size_t n);
