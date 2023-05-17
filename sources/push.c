@@ -27,9 +27,17 @@ void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 		return ;
 	temp = stack_b->head;
 	stack_b->head = stack_b->head->next;
-	temp->next = stack_a->head;
-	stack_a->head = temp;
-	ft_printf("pa\n");
+	if (stack_a->head == NULL)
+	{
+		stack_a->head = temp;
+		stack_a->head->next = NULL;
+	}
+	else
+	{
+		temp->next = stack_a->head;
+		stack_a->head = temp;
+	}
+	ft_printf("pb\n");
 }
 
 void	ft_push_b(t_stack *stack_a, t_stack *stack_b)
