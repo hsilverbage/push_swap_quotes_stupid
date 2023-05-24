@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:48 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/03 15:18:25 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/05/18 02:42:26 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

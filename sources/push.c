@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:26 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/04 17:15:22 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/17 17:21:59 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,19 @@ pb (push b): Take the first element at the top of a and put it at the top of b.
 
 #include "push_swap.h"
 
+// void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
+// {
+// 	t_element	*temp;
+
+// 	if (stack_b->head == NULL)
+// 		return ;
+// 	temp = stack_b->head;
+// 	stack_b->head = stack_b->head->next;
+// 	temp->next = stack_a->head;
+// 	stack_a->head = temp;
+// 	ft_printf("pa\n");
+// }
+
 void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 {
 	t_element	*temp;
@@ -27,8 +40,16 @@ void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 		return ;
 	temp = stack_b->head;
 	stack_b->head = stack_b->head->next;
-	temp->next = stack_a->head;
-	stack_a->head = temp;
+	if (stack_a->head == NULL)
+	{
+		stack_a->head = temp;
+		stack_a->head->next = NULL;
+	}
+	else
+	{
+		temp->next = stack_a->head;
+		stack_a->head = temp;
+	}
 	ft_printf("pa\n");
 }
 
