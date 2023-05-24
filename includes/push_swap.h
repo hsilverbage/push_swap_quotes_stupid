@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/04 17:33:36 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/24 19:05:05 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ t_element	*ft_new_node(char **argv, int i);
 
 int			ft_check_input(int argc, char **argv);
 int			ft_check_if_sorted(t_stack *stack_a);
+int			ft_error(char *s);
+int			ft_check_duplicates(int argc, char **argv);
+int			ft_error_tab(char *s, char **tab);
 
 void		ft_create_list(int argc, char **argv, t_stack *stack_a);
 void		ft_free_stack(t_stack *stack);
@@ -51,6 +54,9 @@ void		ft_push_a(t_stack *stack_a, t_stack *stack_b);
 void		ft_push_b(t_stack *stack_a, t_stack *stack_b);
 void		ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
 void		ft_radix(t_stack *stack_a, t_stack *stack_b);
+void		ft_create_list_quotes(int argc, char **argv, t_stack *stack_a);
+
+char		**ft_all_input_quotes(char *str);
 
 /*----------------------------UTILS--------------------------------*/
 
@@ -66,5 +72,8 @@ int			ft_putnbr(int nbr);
 int			ft_putnbr_unsigned(unsigned int nbr);
 
 long		ft_atol(const char *str);
+
+char		**ft_split(char const *s, char c);
+char	**ft_free_all(char **tab, size_t n);
 
 #endif

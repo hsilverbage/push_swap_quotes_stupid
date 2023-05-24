@@ -1,52 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list.c                                             :+:      :+:    :+:   */
+/*   list_quotes.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 17:52:39 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/24 20:01:07 by hsilverb         ###   ########lyon.fr   */
+/*   Created: 2023/05/24 19:03:41 by hsilverb          #+#    #+#             */
+/*   Updated: 2023/05/24 20:04:56 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_free_stack(t_stack *stack)
-{
-	t_element	*prev;
-
-	while (stack->head != NULL)
-	{
-		prev = stack->head;
-		stack->head = stack->head->next;
-		free(prev);
-	}
-}
-
-t_element	*ft_new_node(char **argv, int i)
+t_element	*ft_new_node_quotes(char **tab)
 {
 	t_element	*new;
 
 	new = malloc(sizeof(t_element));
 	if (!new)
-		return (ft_error("Error\n"), NULL);
-	new->data = ft_atol(argv[i]);
+		return (NULL);
+	new->data = ft_atol(tab[0]);
 	new->index = -1;
 	new->next = NULL;
 	return (new);
 }
 
-void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
+void	ft_fill_stack_a_quotes(int argc, char **tab, t_stack *stack_a)
 {
 	t_element	*new;
 	int			i;
 
 	new = stack_a->head;
-	i = 2;
+	i = 1;
 	while (i < argc)
 	{
-		new->next = ft_new_node(argv, i);
+		new->next = ft_new_node(tab, i);
 		new = new->next;
 		if (new->data > stack_a->max)
 			stack_a->max = new->data;
@@ -57,7 +45,7 @@ void	ft_fill_stack_a(int argc, char **argv, t_stack *stack_a)
 	}
 }
 
-void	ft_set_index(t_stack *stack_a)
+void	ft_set_index_quotes(t_stack *stack_a)
 {
 	t_element	*temp;
 	t_element	*checker;
@@ -81,15 +69,15 @@ void	ft_set_index(t_stack *stack_a)
 	}
 }
 
-void	ft_create_list(int argc, char **argv, t_stack *stack_a)
+void	ft_create_list_quotes(int argc, char **tab, t_stack *stack_a)
 {
 	t_element	*new;
 
-	new = ft_new_node(argv, 1);
+	new = ft_new_node_quotes(tab);
 	stack_a->head = new;
 	stack_a->max = new->data;
 	stack_a->min = new->data;
-	stack_a->size = argc - 1;
-	ft_fill_stack_a(argc, argv, stack_a);
-	ft_set_index(stack_a);
+	stack_a->size = argc;
+	ft_fill_stack_a_quotes(argc, tab, stack_a);
+	ft_set_index_quotes(stack_a);
 }

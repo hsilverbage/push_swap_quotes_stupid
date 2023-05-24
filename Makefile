@@ -21,6 +21,7 @@ SRC =	$(SRC_DIR)/main.c					\
 		$(SRC_DIR)/utils/ft_printf.c		\
 		$(SRC_DIR)/utils/ft_printf_utils.c	\
 		$(SRC_DIR)/utils/ft_bzero.c			\
+		$(SRC_DIR)/utils/ft_split.c			\
 		$(SRC_DIR)/sources/list.c			\
 		$(SRC_DIR)/sources/push.c			\
 		$(SRC_DIR)/sources/reverse.c		\
@@ -28,7 +29,9 @@ SRC =	$(SRC_DIR)/main.c					\
 		$(SRC_DIR)/sources/check_input.c	\
 		$(SRC_DIR)/sources/radix.c			\
 		$(SRC_DIR)/sources/rotate.c			\
-		$(SRC_DIR)/sources/swap.c
+		$(SRC_DIR)/sources/swap.c			\
+		$(SRC_DIR)/sources/input_quotes.c	\
+		$(SRC_DIR)/sources/list_quotes.c
 
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
