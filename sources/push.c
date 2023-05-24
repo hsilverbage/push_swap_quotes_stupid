@@ -6,7 +6,7 @@
 /*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:26 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/17 17:21:59 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/05/24 16:17:31 by henrik           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,7 @@ void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 		temp->next = stack_a->head;
 		stack_a->head = temp;
 	}
-<<<<<<< HEAD
 	ft_printf("pa\n");
-=======
-	ft_printf("pb\n");
->>>>>>> refs/remotes/origin/main
 }
 
 void	ft_push_b(t_stack *stack_a, t_stack *stack_b)
