@@ -50,7 +50,11 @@ void	ft_push_a(t_stack *stack_a, t_stack *stack_b)
 		temp->next = stack_a->head;
 		stack_a->head = temp;
 	}
+<<<<<<< HEAD
 	ft_printf("pa\n");
+=======
+	ft_printf("pb\n");
+>>>>>>> refs/remotes/origin/main
 }
 
 void	ft_push_b(t_stack *stack_a, t_stack *stack_b)

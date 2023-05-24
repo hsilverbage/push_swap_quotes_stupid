@@ -16,15 +16,15 @@ void	ft_free_stack(t_stack *stack)
 {
 	t_element	*prev;
 
-	if (stack->head != NULL)
+	// if (stack->head != NULL)
+	// {
+	while (stack->head != NULL)
 	{
-		while (stack->head != NULL)
-		{
-			prev = stack->head;
-			stack->head = stack->head->next;
-			free(prev);
-		}
+		prev = stack->head;
+		stack->head = stack->head->next;
+		free(prev);
 	}
+	// }
 }
 
 t_element	*ft_new_node(char **argv, int i)
