@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:36 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/24 19:05:05 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/06/01 13:27:38 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,16 @@ int			ft_check_if_sorted(t_stack *stack_a);
 int			ft_error(char *s);
 int			ft_check_duplicates(int argc, char **argv);
 int			ft_error_tab(char *s, char **tab);
+int			ft_printf(const char *str, ...);
+int			ft_format(va_list args, char c);
+int			ft_print_address(void *address);
+int			ft_putstr(char *str);
+int			ft_putchar(char c);
+int			ft_putnbr_hexa(char *base, unsigned int nbr);
+int			ft_putnbr(int nbr);
+int			ft_putnbr_unsigned(unsigned int nbr);
+
+long		ft_atol(const char *str);
 
 void		ft_create_list(int argc, char **argv, t_stack *stack_a);
 void		ft_free_stack(t_stack *stack);
@@ -55,25 +65,10 @@ void		ft_push_b(t_stack *stack_a, t_stack *stack_b);
 void		ft_small_sort(int argc, t_stack *stack_a, t_stack *stack_b);
 void		ft_radix(t_stack *stack_a, t_stack *stack_b);
 void		ft_create_list_quotes(int argc, char **argv, t_stack *stack_a);
-
-char		**ft_all_input_quotes(char *str);
-
-/*----------------------------UTILS--------------------------------*/
-
 void		ft_bzero(void *s, size_t n);
 
-int			ft_printf(const char *str, ...);
-int			ft_format(va_list args, char c);
-int			ft_print_address(void *address);
-int			ft_putstr(char *str);
-int			ft_putchar(char c);
-int			ft_putnbr_hexa(char *base, unsigned int nbr);
-int			ft_putnbr(int nbr);
-int			ft_putnbr_unsigned(unsigned int nbr);
-
-long		ft_atol(const char *str);
-
+char		**ft_all_input_quotes(char *str);
 char		**ft_split(char const *s, char c);
-char	**ft_free_all(char **tab, size_t n);
+char		**ft_free_all(char **tab, size_t n);
 
 #endif

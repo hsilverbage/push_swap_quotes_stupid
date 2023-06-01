@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:51 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/24 20:05:36 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/06/01 13:23:59 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	ft_for_one_arg(char **argv, t_stack *stack_a, t_stack *stack_b)
 		ft_small_sort((ft_new_argc(tab) + 1), stack_a, stack_b);
 	ft_free_all(tab, ft_new_argc(tab));
 }
+
 int	main(int argc, char **argv)
 {
 	t_stack	stack_b;

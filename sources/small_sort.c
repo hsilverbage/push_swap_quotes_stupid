@@ -6,7 +6,7 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:01 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/24 19:23:11 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/06/01 13:25:33 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	ft_sort_3(t_stack *stack_a)
 void	ft_sort_4(t_stack *stack_a, t_stack *stack_b)
 {
 	int	min;
-
 
 	min = ft_find_distance(stack_a, 1);
 	if (min == 2)
