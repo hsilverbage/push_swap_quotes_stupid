@@ -3,20 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:53 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 19:38:12 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/06/02 13:54:58 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-rra (reverse rotate a): Shift down all elements of stack a by 1.
-	The last element becomes the first one.
-rrb (reverse rotate b): Shift down all elements of stack b by 1.
-	The last element becomes the first one.
-rrr : rra and rrb at the same time.
-*/
 #include "push_swap.h"
 
 void	ft_reverse(t_stack *stack, char c)

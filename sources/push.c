@@ -6,16 +6,9 @@
 /*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:52:26 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/24 16:28:00 by hsilverb         ###   ########lyon.fr   */
+/*   Updated: 2023/06/02 13:54:50 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-pa (push a): Take the first element at the top of b and put it at the top of a.
-	Do nothing if b is empty.
-pb (push b): Take the first element at the top of a and put it at the top of b.
-	Do nothing if a is empty.
-*/
 
 #include "push_swap.h"
 

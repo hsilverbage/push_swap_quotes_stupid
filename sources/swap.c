@@ -3,20 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:42 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:02:38 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/06/02 13:55:11 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-sa (swap a): Swap the first 2 elements at the top of stack a.
-    Do nothing if there is only one or no elements.
-sb (swap b): Swap the first 2 elements at the top of stack b.
-    Do nothing if there is only one or no elements.
-ss : sa and sb at the same time.
-*/
 
 #include "push_swap.h"
 

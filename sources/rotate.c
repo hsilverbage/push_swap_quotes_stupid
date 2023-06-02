@@ -3,20 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: henrik <henrik@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: hsilverb <hsilverb@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 19:17:30 by hsilverb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:02:47 by henrik           ###   ########lyon.fr   */
+/*   Updated: 2023/06/02 13:55:03 by hsilverb         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-ra (rotate a): Shift up all elements of stack a by 1.
-    The first element becomes the last one.
-rb (rotate b): Shift up all elements of stack b by 1.
-    The first element becomes the last one.
-rr : ra and rb at the same time.
-*/
 
 #include "push_swap.h"
 
